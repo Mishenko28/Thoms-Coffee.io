@@ -5,18 +5,18 @@ import React, { useState } from "react";
 export default function Content(prop) {
 
   const products = [
-    {name: "Americano", price:120, image: "../src/assets/Americano.png" },
-    {name: "Cappuccino", price: 130, image: "../src/assets/Cappuccino.png" },
-    {name: "Caramel", price: 110, image: "../src/assets/Caramel.png" },
-    {name: "Chocolate", price: 125, image: "../src/assets/Chocolate.png" },
-    {name: "DarkMocha", price: 130, image: "../src/assets/DarkMocha.png" },
-    {name: "DirtyChai", price: 105, image: "../src/assets/DirtyChai.png" },
-    {name: "FlatWhite", price: 110, image: "../src/assets/FlatWhite.png" },
-    {name: "KapeKastilla", price: 100, image: "../src/assets/KapeKastilla.png" },
-    {name: "KapeMestizo", price: 135, image: "../src/assets/KapeMestizo.png" },
-    {name: "Latte", price: 110, image: "../src/assets/Latte.png" },
-    {name: "Matcha", price: 90, image: "../.src/assets/Matcha.png" },
-    {name: "WhiteMocha", price: 120, image: "../src/assets/WhiteMocha.png" }
+    {name: "Americano", price:120, image: "src/assets/Americano.png" },
+    {name: "Cappuccino", price: 130, image: "src/assets/Cappuccino.png" },
+    {name: "Caramel", price: 110, image: "src/assets/Caramel.png" },
+    {name: "Chocolate", price: 125, image: "src/assets/Chocolate.png" },
+    {name: "DarkMocha", price: 130, image: "src/assets/DarkMocha.png" },
+    {name: "DirtyChai", price: 105, image: "src/assets/DirtyChai.png" },
+    {name: "FlatWhite", price: 110, image: "src/assets/FlatWhite.png" },
+    {name: "KapeKastilla", price: 100, image: "src/assets/KapeKastilla.png" },
+    {name: "KapeMestizo", price: 135, image: "src/assets/KapeMestizo.png" },
+    {name: "Latte", price: 110, image: "src/assets/Latte.png" },
+    {name: "Matcha", price: 90, image: ".src/assets/Matcha.png" },
+    {name: "WhiteMocha", price: 120, image: "src/assets/WhiteMocha.png" }
   ];
 
   const initialQuantities = Object.fromEntries(
