@@ -15,7 +15,7 @@ export default function Content(prop) {
     {name: "KapeKastilla", price: 100, image: "src/assets/KapeKastilla.png" },
     {name: "KapeMestizo", price: 135, image: "src/assets/KapeMestizo.png" },
     {name: "Latte", price: 110, image: "src/assets/Latte.png" },
-    {name: "Matcha", price: 90, image: ".src/assets/Matcha.png" },
+    {name: "Matcha", price: 90, image: "src/assets/Matcha.png" },
     {name: "WhiteMocha", price: 120, image: "src/assets/WhiteMocha.png" }
   ];
 
