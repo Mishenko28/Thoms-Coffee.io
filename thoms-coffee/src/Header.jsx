@@ -8,7 +8,7 @@ export default function Header(prop) {
                 <div className="bar bar--middle"></div>
                 <div className="bar bar--bottom"></div>
             </label>
-            <img src="src/assets/THOMS COFFEE.png"/>
+            <h1>Thoms Coffee</h1>
             <div className="profile-pic">
                 <i className="fa-solid fa-user"></i>
             </div>
