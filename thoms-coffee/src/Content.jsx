@@ -59,11 +59,12 @@ export default function Content(prop) {
       [name]: Math.max(0, prev[name] - 1),
     }))
 
-    setProductTotal((prev) => Math.max(0, prev - 1))
+    if (quantities[name] != 0) {
+      setPriceTotal((prev) => Math.max(0, prev - price))
 
-    setPriceTotal((prev) => 
-      Math.max(0, prev - price)
-    )
+      setProductTotal((prev) => Math.max(0, prev - 1))
+    }
+    
   };
 
   const productList = products.map((product) =>
@@ -80,7 +81,7 @@ export default function Content(prop) {
         </button>
       </div>
       <div className="price-container">
-        <h1>Price: </h1>
+        <h1>₱</h1>
         <h1 className="price">{product.price}</h1>
       </div>
     </div>
@@ -91,7 +92,7 @@ export default function Content(prop) {
       <div key={product.name} className="cart-product-container">
         <h1>{product.name}</h1>
         <h1>{quantities[product.name]}</h1>
-        <h1>{quantities[product.name] * product.price}</h1>
+        <h1>₱{quantities[product.name] * product.price}</h1>
       </div>
   );
   
@@ -125,7 +126,7 @@ export default function Content(prop) {
             <div className="cart-title-container">
               <h1>Total</h1>
               <h1>{productTotal}</h1>
-              <h1>{priceTotal}</h1>
+              <h1>₱{priceTotal}</h1>
             </div>
           }
           {productTotal == 0 && <h1 className="none">No item</h1>}

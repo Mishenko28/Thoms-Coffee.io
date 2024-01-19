@@ -1,10 +1,13 @@
 body {
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #220901;
+  background-color: #fff;
 }
 header {
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +18,7 @@ header {
   background-color: #000;
 }
 .profile-pic {
+  cursor: pointer;
   position: absolute;
   right: 20px;
   bottom: 10px;
@@ -104,7 +108,7 @@ header {
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
   padding: 20px;
 }
 .product {
@@ -116,10 +120,13 @@ header {
   width: 120px;
   border-radius: 12px;
   text-align: center;
-  border: 1px solid #000;
   padding: 10px;
   flex-grow: 1;
-  background-color: #fff;
+  color: #fff;
+  box-shadow: 10px 10px 10px #000;
+  cursor: pointer;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,150,135,1) 100%);
 }
 .title {
   font-size: 20px;
@@ -135,7 +142,7 @@ h1 {
   margin: 0;
 }
 .price-container h1 {
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 700;
 }
 .price-container {
@@ -149,22 +156,29 @@ h1 {
   margin-bottom: 5px;
 }
 .button-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 35px;
   height: 30px;
   border-radius: 50%;
-  border: 0;
-  background-color: #000;
-  color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
   cursor: pointer;
-  text-align: center;
-  font-size: 18px;
+}
+.button-container button i {
+  font-size: 20px;
 }
 .button-container span {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
 }
 .product:hover {
   transform: scale(105%);
+}
+.product:active {
+  transform: scale(110%);
 }
 .cart {
   display: flex;
@@ -180,6 +194,7 @@ h1 {
   border-radius: 5px;
   border: 1px solid #000;
   gap: 4px;
+  box-shadow: 10px 10px 10px #000;
 }
 .cart-txt-container {
   display: flex;
@@ -196,7 +211,8 @@ h1 {
   top: 8px;
 }
 .button-container button:active {
-  transform: scale(110%);
+  transform: scale(150%);
+  transition: 0.3s;
 }
 .cart-title-container {
   display: flex;
@@ -234,24 +250,29 @@ h1 {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .sidebar {
+  left: 0;
+  top: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
   position: fixed;
   height: 100%;
   width: 220px;
-  background-color: #0f0a06;
-  z-index: 1;
+  background-color: #000;
 }
 .sidebar h1 {
-  background-color: #000;
+  border-left: 8px solid #fff;
   color: #fff;
   font-size: 20px;
   margin-top: 20px;
   width: 180px;
   padding: 5px;
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+.sidebar h1:hover{
+  color: #000;
+  background-color: #fff;
+  transition: 0.3s;
 }
 .buy{
   background-color: #0f0a06;
@@ -265,7 +286,7 @@ h1 {
   top: 5px;
   cursor: pointer;
 }
-.buy:active {
+.buy:hover {
   transform: scale(110%);
 }
 .contact-container {
@@ -283,15 +304,18 @@ transform: scale(105%);
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
-  background-color: #000;
+  border-left: 4px solid #fff;
   color: #fff;
   width: 160px;
   margin: 0;
   margin-top: 9px;
   padding: 3px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
   cursor: pointer;
   font-weight: 100;
+}
+.contact-container h2:hover{
+  color: #000;
+  background-color: #fff;
 }
 .contact-container h2:active {
   transform: scale(105%);
@@ -299,14 +323,17 @@ transform: scale(105%);
 .sidebar h3 {
   font-weight: 100;
   font-size: 20px;
-  background-color: #000;
   color: #fff;
   width: 160px;
+  border-left: 4px solid #fff;
   margin: 0;
   margin-top: 9px;
   padding: 3px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
   cursor: pointer;
+}
+.sidebar h3:hover {
+  color: #000;
+  background-color: #fff;
 }
 .purchase-container {
   display: flex;
@@ -314,7 +341,7 @@ transform: scale(105%);
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #1A120B;
+  background-color: #fff;
   z-index: 1;
   padding-top: 15%;
 }
@@ -333,11 +360,10 @@ transform: scale(105%);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 .purchase button {
-  padding: 10px 15px;
+  padding: 10px 80px;
   border-radius: 5px;
   font-weight: 700;
   border: 0;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
 header h1 {
@@ -347,6 +373,63 @@ header h1 {
 .purchase button:hover {
   transform: scale(110%);
 }
+.signin-container {
+  width: 280px;
+  height: 350px;
+  color: #fff;
+  background-color: #000;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+.signin-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 200px;
+}
+.form button {
+  height: 30px;
+  margin-top: 40px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form input {
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 4px;
+}
+.user-info {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  top: 100px;
+  width: 250px;
+  background-color: #000;
+  border: 1px solid  #fff;
+}
+.user-info h1 {
+  margin: 15px;
+  font-size: 14px;
+}
+.user-info button {
+  align-self: flex-end;
+  cursor: pointer;
+  margin: 15px;
+  border: 0;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+
+
 
 
 
@@ -400,9 +483,9 @@ header h1 {
     top: 19px;
   }
   .button-container button {
-    width: 55px;
-    height: 50px;
-    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
   .button-container {
     width: 160px;
@@ -424,8 +507,15 @@ header h1 {
     font-size: 100px;
     margin-top: 30px;
   }
-  
-  
+  .purchase button {
+    padding: 10px 150px;
+  }
+  .sidebar {
+    top: 180px;
+  }
+  .user-info {
+    top: 180px;
+  }
 
 
 }

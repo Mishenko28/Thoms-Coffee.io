@@ -17,7 +17,7 @@ export default function Sidebar() {
                     <a href="https://www.facebook.com/johnthomas.alog"><h2>Facebook<i className="fa-brands fa-facebook"></i></h2></a>
                     <a href="https://instagram.com/jtmishenko"><h2>Instagram<i className="fa-brands fa-instagram"></i></h2></a>
                     <a href="https://github.com/Mishenko28"><h2>Github<i className="fa-brands fa-github"></i></h2></a>
-                    <a href="#"><h2>Discord<i class="fa-brands fa-discord"></i></h2></a>
+                    <a href="#"><h2>Discord<i className="fa-brands fa-discord"></i></h2></a>
                 </div>
             }
             <h1 onClick={addressHandler}>Address</h1>
